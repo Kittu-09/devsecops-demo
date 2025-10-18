@@ -1,5 +1,6 @@
 # Build stage
-FROM nginx:stable-perl AS build
+FROM node:20-alpine AS build
+RUN apk update && apk upgrade libxml2
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
