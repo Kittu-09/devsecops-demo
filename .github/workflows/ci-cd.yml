@@ -78,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     env:
-      REGISTRY: ghcr.io
+      REGISTRY: ghcr.io/Kittu-09
       IMAGE_NAME: ${{ github.repository }}
     outputs:
       image_tag: ${{ steps.set_output.outputs.image_tag }}
